@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>宝宝今天吃点啥</title>
   <style>
     * {
@@ -20,7 +20,6 @@
       background-image: url("http://tbvrmfkru.hn-bkt.clouddn.com/background.png");
       background-repeat: no-repeat;
       background-position: center center;
-      background-attachment: fixed;
       font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
     }
     
@@ -32,8 +31,6 @@
       background: transparent;
       padding: 60px 80px;
       border-radius: 30px;
-      width: 90%;
-      max-width: 600px;
     }
     
     .title {
@@ -55,7 +52,6 @@
       font-weight: bold;
       transition: all 0.3s ease;
       text-shadow: 2px 2px 4px rgba(255, 107, 107, 0.3);
-      word-break: break-all;
     }
     
     .food:hover {
@@ -74,7 +70,6 @@
       border-radius: 50px;
       box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
       transition: all 0.3s ease;
-      max-width: 100%;
     }
     
     .button:hover {
@@ -85,52 +80,9 @@
     .button:active {
       transform: translateY(0);
     }
-    
     .icon {
       font-size: 3rem;
       margin-bottom: 20px;
-    }
-
-    /* 移动端适配 */
-    @media screen and (max-width: 768px) {
-      .container {
-        padding: 30px 20px;
-      }
-      
-      .title {
-        font-size: 2rem;
-        margin: 0 0 25px 0;
-      }
-      
-      .food {
-        font-size: 2.5rem;
-        margin: 20px 0 30px 0;
-      }
-      
-      .button {
-        padding: 15px 40px;
-        font-size: 1.2rem;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      .container {
-        padding: 20px 15px;
-      }
-      
-      .title {
-        font-size: 1.6rem;
-      }
-      
-      .food {
-        font-size: 2rem;
-      }
-      
-      .button {
-        padding: 12px 30px;
-        font-size: 1rem;
-        width: 100%;
-      }
     }
   </style>
 </head>
@@ -151,6 +103,7 @@
     const button = document.querySelector('#button');
     
     button.addEventListener('click', function() {
+
       foodResult.style.transform = 'scale(0.8)';
       foodResult.style.opacity = '0.5';
       
